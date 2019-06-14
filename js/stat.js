@@ -8,8 +8,12 @@ var GAP = 10;
 var HISTOGRAM_HEIGHT = 150;
 var HISTOGRAM_COLUMN = 40;
 var HISTOGRAM_INTERVAL = 50;
+<<<<<<< HEAD
 var HISTOGRAM_X = CLOUD_X + GAP * 2;
 var START_POSITION_HISTAGRAM = (CLOUD_Y + CLOUD_HEIGHT) / 3;
+=======
+var HISTOGRAM_X = 90;
+>>>>>>> 8db0befca7eaa3acdb68e0e0c38cad5c88fca115
 
 var fontFamily = 'PT Mono';
 var fontSize = '16px';
@@ -52,6 +56,7 @@ var getMaxElement = function (arr) {
   return maxElement;
 };
 
+<<<<<<< HEAD
 // Функция отрисовки столбцов
 
 var getRenderColumn = function () {
@@ -86,6 +91,17 @@ var renderHistogram = function (ctx, usersNames, usersTimes) {
   var renderColumn = getRenderColumn();
   for (var i = 0; i < usersNames.length; i++) {
     renderColumn(ctx, usersNames[i], Math.round(usersTimes[i]), maxUserTime);
+=======
+// Функция отрисовки результата игрока
+
+
+var renderHistogram = function (ctx, names, times) {
+  var maxUserTime = Math.round(getMaxElement(times));
+
+  var renderColumn = getRenderColumn();
+  for (var i = 0; i < names.length; i++) {
+    renderColumn(ctx, names[i], Math.round(times[i]), maxUserTime);
+>>>>>>> 8db0befca7eaa3acdb68e0e0c38cad5c88fca115
   }
 };
 
